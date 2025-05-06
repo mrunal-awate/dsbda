@@ -1,0 +1,28 @@
+1. import pandas as pd 
+import numpy as np
+import matplotlib.pyplot as plt
+import seaborn as sns
+
+2. df = sns.load_dataset('titanic')
+df
+
+3. df.isnull().sum()
+
+4. sns.catplot(x="sex", hue="survived", kind="count", data=df)
+
+5. sns.boxplot(x="sex", y="age", hue="survived", data=df)
+
+6. sns.boxplot(x="sex", y="age", data=df)
+
+7. df = df.dropna(subset=['age'])
+Q1 = df["age"].quantile(0.25)
+Q3 = df["age"].quantile(0.75)
+IQR = Q3 - Q1
+
+lower_bound = Q1 - 1.5 * IQR
+upper_bound = Q3 + 1.5 * IQR
+
+df_filtered = df[(df["age"] >= lower_bound) & (df["age"] <= upper_bound)]
+
+8. sns.boxplot(x="class", y="age", data=df_filtered)
+plt.show()

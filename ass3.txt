@@ -1,0 +1,22 @@
+1. import pandas as pd
+import numpy as np
+
+2. file_path = ('Iris.csv')
+\
+3. df = pd.read_csv('Iris.csv')
+
+4. df
+
+5. df.isnull().sum()
+
+6. df.describe()
+
+7. print(df["SepalLengthCm"].mean())
+
+8. print(df["SepalLengthCm"].median())
+
+9. print(df["SepalLengthCm"].std())
+
+10. print(df["SepalLengthCm"].mode())
+
+11. df.groupby('Species')['SepalLengthCm'].aggregate(['mean','median','min','max'])

@@ -1,0 +1,75 @@
+1. import pandas as pd
+import numpy as np
+import matplotlib.pyplot as plt
+
+2. file_path = "Iris.csv"
+data = pd.read_csv(file_path)
+print(data.head())
+
+3. data.head()
+
+4. data.info()
+
+5. print(data.columns)
+
+6. X = data.drop(['Species'], axis=1)
+y = data['Species']
+print(X)
+print(y)
+print(X.shape)
+
+7. x = data.iloc[:,:4].values
+y = data['Species'].values
+
+8. from sklearn.model_selection import train_test_split
+from sklearn.naive_bayes import GaussianNB
+from sklearn.metrics import accuracy_score
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2,random_state=42)
+gaussian = GaussianNB()
+gaussian.fit(X_train, y_train)
+y_pred = gaussian.predict(X_test)
+print("Accuracy:", accuracy_score(y_test, y_pred))
+
+9. from sklearn.metrics import precision_score, recall_score
+precision = precision_score(y_test, y_pred, average='micro')
+recall = recall_score(y_test, y_pred, average='micro')
+print("Precision:", precision)
+print("Recall:", recall)
+
+10. from sklearn.model_selection import train_test_split
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2,shuffle=True)
+print(X_train.shape)
+print(X_test.shape)
+print(y_train.shape)
+print(y_test.shape)
+
+11. from sklearn.naive_bayes import GaussianNB
+model = GaussianNB()
+model.fit(X_train, y_train)
+
+12. y_pred = model.predict(X_test)
+model.score(X_test,y_test)
+
+13. from sklearn.metrics import accuracy_score, confusion_matrix,ConfusionMatrixDisplay
+print(accuracy_score(y_test, y_pred))
+
+14. cm = confusion_matrix(y_test, y_pred)
+disp = ConfusionMatrixDisplay(confusion_matrix = cm)
+print("Confusion matrix:")
+print(cm)
+
+15. disp.plot()
+plt.show()
+
+16. def get_confusion_matrix_values(y_true, y_pred):
+    cm = confusion_matrix(y_true, y_pred)
+    return(cm[0][0], cm[0][1], cm[1][0], cm[1][1])
+TP, FP, FN, TN = get_confusion_matrix_values(y_test, y_pred)
+print("TP: ", TP)
+print("FP: ", FP)
+print("FN: ", FN)
+print("TN: ", TN) 
+
+17. print("The Accuracy is ", (TP+TN)/(TP+TN+FP+FN))
+print("The precision is ", TP/(TP+FP))
+print("The recall is ", TP/(TP+FN))
