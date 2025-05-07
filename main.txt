@@ -1,0 +1,30 @@
+ass1: Data Wrangling: I Perform the following operations using Python on any open
+source dataset (e.g., data.csv)
+
+ass2: Create an “Academic performance” dataset of students and perform the given
+operations using Python.
+
+ass3: Provide summary statistics (mean, median, minimum, maximum, standard deviation) for a dataset (age, income etc.) with numeric variables grouped by one of the qualitative (categorical) variable.
+
+ass4: Create a Linear Regression Model using Python/R to predict home prices using Boston Housing Dataset (https://www.kaggle.com/c/boston-housing).
+
+ass5: Implement logistic regression using Python/R to perform classification on
+Social_Network_Ads.csv dataset.
+
+ass6: 1. Implement Simple Naïve Bayes classification algorithm using Python/R on iris.csv dataset. 2. Compute Confusion matrix to find TP, FP, TN, FN, Accuracy, Error rate, Precision, Recall on the given dataset.
+
+ass7: 1. Extract Sample document and apply following document pre-processing methods:
+Tokenization, POS Tagging, stop words removal, Stemming and Lemmatization. 2. Create
+representation of document by calculating Term Frequency and Inverse Document Frequency..
+
+ass8: 1. Use the inbuilt dataset 'titanic'. The dataset contains 891 rows and contains information about the passengers who boarded the unfortunate Titanic ship. Use the Seaborn library to see if we can find any patterns in the data.
+2. Write a code to check how the price of the ticket (column name: 'fare') for each passenger is distributed by plotting a histogram
+
+ass9: 1. Use the inbuilt dataset 'titanic' as used in the above problem. Plot a box plot for distribution of age with respect to each gender along with the information about whether they survived or not. (Column names : 'sex' and 'age').
+2. Write observations on the inference from the above statistics.
+
+ass10:  Download the Iris flower dataset or any other dataset into a DataFrame. (e.g.,
+https://archive.ics.uci.edu/ml/datasets/Iris ). Scan the dataset and give the inference as:
+1. List down the features and their types (e.g., numeric, nominal) available in the
+dataset. 2. Create a histogram for each feature in the dataset to illustrate the feature distributions. 3. Create a box plot for each feature in the dataset.
+4. Compare distributions and identify outliers.
